@@ -1,15 +1,13 @@
-
 import Home from './components/pages/home/Home';
-import About from './components/pages/home/About';
 import { Route, Routes } from 'react-router';
+import Navbar from './components/shared/Navbar';
+
 
 function App() {
-
-
   return (
-    <div className="">
+    <div className="bg-red-500">
      
-    
+     <Navbar/>
       
      <Routes>
       <Route path='/' element={<Home/>}></Route>
