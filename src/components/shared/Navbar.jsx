@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="">
  
     <div className="relative z-20 border-b bg-white shadow-xl">
-        <div className="px-4 lg:py-2">
+        <div className="px-6 lg:py-2">
           <div className="flex items-center justify-between">
             <div className="relative z-20">
             <h1 className='text-2xl font-bold py-2'>Pandami</h1>

@@ -5,7 +5,7 @@ import Navbar from './components/shared/Navbar';
 
 function App() {
   return (
-    <div className="bg-red-500">
+    <div className="">
      
      <Navbar/>
       
