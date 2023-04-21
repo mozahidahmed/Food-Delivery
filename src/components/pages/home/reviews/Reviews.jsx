@@ -1,5 +1,3 @@
-
-
 import React, { useRef, useState } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";

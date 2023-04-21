@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="px-6 lg:py-2">
           <div className="flex items-center justify-between">
             <div className="relative z-20">
-            <h1 className='text-2xl font-bold py-2'>Pandami</h1>
+            <h1 className='text-2xl font-bold py-2 text-red-500'>Pandami</h1>
             </div>
 
             <div className="flex items-center justify-end border-l lg:border-l-0">
@@ -48,7 +48,7 @@ const Navbar = () => {
                     
                     <li className=''>
                         <div className="flex items-center ">
-                          <span className="relative mt-1 group-hover:text-cyan-800 text-2xl"><HiOutlineShoppingBag/></span>
+                          <span className="relative mt-1 group-hover:text-cyan-800 text-red-500 text-2xl"><HiOutlineShoppingBag/></span>
 
                         </div>
                     </li>
