@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
       <div className="grid py-16 justify-center mx-auto">
-        <div className="grid lg:px-48 px-12 lg:grid-cols-2 justify-center items-center gap-2">
+        <div className="grid lg:px-48 px-12 lg:grid-cols-2 md:grid-cols-2 justify-center items-center gap-2">
           <div className="">
             <p className="text-red-500">ABOUT THE FOOD RESTAURANT</p>
             <h1 className="lg:text-3xl font-bold">
@@ -19,7 +19,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="grid lg:px-48 px-12 lg:grid-cols-3 mt-6 justify-center items-center gap-4">
+        <div className="grid lg:px-48 px-12 lg:grid-cols-3 md:grid-cols-3 mt-6 justify-center items-center gap-4">
           <img
             src="	https://winsfolio.net/html/foodio/assets/img/restaurant-2.jpg"
             alt=""

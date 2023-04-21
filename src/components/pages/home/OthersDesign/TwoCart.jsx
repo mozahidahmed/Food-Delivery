@@ -4,7 +4,7 @@ const TwoCart = () => {
     	
       return (
         <div className="py-12">
-          <div className="grid lg:px-12 lg:grid-cols-2 justify-center items-center gap-4">
+          <div className="grid px-12 lg:grid-cols-2 md:grid-cols-2 justify-center items-center gap-4">
             <div
               className="bg-red-500 p-5 text-white rounded-xl py-12"
               style={{
