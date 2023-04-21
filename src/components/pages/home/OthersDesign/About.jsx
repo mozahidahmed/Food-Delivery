@@ -19,7 +19,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="grid lg:px-48 lg:grid-cols-3 mt-6 justify-center items-center gap-4">
+        <div className="grid lg:px-48 px-12 lg:grid-cols-3 mt-6 justify-center items-center gap-4">
           <img
             src="	https://winsfolio.net/html/foodio/assets/img/restaurant-2.jpg"
             alt=""
