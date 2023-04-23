@@ -6,9 +6,9 @@ import LogIn from './components/pages/Authentication/Login';
 import Register from './components/pages/Authentication/Register';
 import Dashboard from './components/pages/dashboard/Dashboard';
 import Welcome from './components/pages/dashboard/Welcome';
-import Profile from './components/pages/dashboard/Profile';
 import MyOrder from './components/pages/dashboard/user/MyOrder';
 import AddReview from './components/pages/dashboard/user/AddReview';
+import Profile from './components/pages/dashboard/user/Profile';
 
 
 function App() {
