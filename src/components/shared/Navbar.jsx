@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../firebase.init';
 import { signOut } from "firebase/auth";
+import Dashboard from './../pages/dashboard/Dashboard';
 
 
 
@@ -59,48 +60,46 @@ const Navbar = () => {
                         </div>
                       </li>
                     </Link>
-                     
-                    <Link to="blogs">
-                      <li>
+                    <li className="">
+                      <Link to="blogs">
                         <div className="flex items-center">
-                          <span className="relative group-hover:text-cyan-800 text-2xl "></span>
-                          <span className="relative px-2 group-hover:text-cyan-800 text-2xl ">
-                            Blog
+                          <span className="relative   group-hover:text-cyan-800 text-2xl">
+                           Blogs
                           </span>
                         </div>
-                      </li>
-                    </Link>
-
-                   
-
-                  
+                      </Link>
+                    </li>
 
                     {user ? (
                       <>
-                       <li className="">
-                      <div className="flex items-center ">
-                        <span className="relative mt-1 group-hover:text-cyan-800 text-red-500 text-2xl">
-                          <HiOutlineShoppingBag />
-                        </span>
-                      </div>
-                    </li>
-                       <li>
-                      <div className="flex items-center">
-                        <span className="relative group-hover:text-cyan-800 text-2xl ">
-                          <RxAvatar />
-                        </span>
-                        <span className="relative px-2 group-hover:text-cyan-800 text-2xl ">
-                          Mozahidul
-                        </span>
-                      </div>
-                    </li>
-                      <li>
-                        <div className="flex items-center">
-                          <span className="relative px-2   text-red-500 text-2xl">
-                            <Link onClick={logout}> Logout</Link>
-                          </span>
-                        </div>
-                      </li>
+                        <li className="">
+                          <Link to="cart">
+                            <div className="flex items-center">
+                              <span className="relative mt-1  group-hover:text-cyan-800 text-red-500 text-2xl">
+                                <HiOutlineShoppingBag />
+                              </span>
+                            </div>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="dashboard">
+                            <div className="flex items-center">
+                              <span className="relative group-hover:text-cyan-800 text-2xl ">
+                                <RxAvatar />
+                              </span>
+                              <span className="relative px-2 group-hover:text-cyan-800 text-2xl ">
+                            Dashboard
+                              </span>
+                            </div>
+                          </Link>
+                        </li>
+                        <li>
+                          <div className="flex items-center">
+                            <span className="relative px-2   text-red-500 text-2xl">
+                              <Link onClick={logout}> Logout</Link>
+                            </span>
+                          </div>
+                        </li>
                       </>
                     ) : (
                       <li>
