@@ -1,38 +1,44 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { useGetRestaurantsQuery } from '../../../../features/api/apiSlice';
+import Loading from '../../../shared/Loading';
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 const Restaurants = () => {
-  const [data,setData]=useState([]);
+  const navigate = useNavigate();
 
-useEffect(()=>{
-  fetch('rs.json')
-  .then((res)=>res.json())
-  .then((data)=>setData(data))
-
-},[])
+ const { data, isLoading ,isSuccess} = useGetRestaurantsQuery();
+  if (isLoading) {
+    <Loading />
+  }
+  // if (isSuccess) {
+  //   console.log(data);
+  // }
 
 
     return (
       <div>
-        <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-1  px-16 py-6 gap-4">
-          {data.map((data) => (
+        <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  px-16 py-6 gap-4">
+          {data?.map((data) => (
             <>
-              <div className="card shadow-xl">
-                <img
-                  src={data.resimg}
-                  alt=""
-                />
+              <div
+                className="card shadow-xl"
+                onClick={() => navigate(`/restaurantfood/${data._id}`)}
+              >
+                <img src={data.resimg} alt="" />
                 <div className="mt-2 p-2">
                   <div className="flex justify-between items-center">
                     <h1 className="font-bold">{data.resname}</h1>
                     <div className="flex gap-2 items-center">
                       <AiFillStar className="text-yellow-500"></AiFillStar>
-                      <p>3.7</p>
+                      <p>{data.rank}</p>
                     </div>
                   </div>
                   <h1>{data.location}</h1>
-                  <h1>{data.food[0].fname}</h1>
                 </div>
               </div>
             </>
