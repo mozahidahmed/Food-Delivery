@@ -6,11 +6,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../firebase.init';
 import { signOut } from "firebase/auth";
 import Dashboard from './../pages/dashboard/Dashboard';
+import { useSelector } from 'react-redux';
 
 
 
 const Navbar = () => {
    const [user] = useAuthState(auth);
+   const {list}=useSelector(state=>state.cart)
 
    
    const logout = () => {
@@ -78,6 +80,7 @@ const Navbar = () => {
                               <span className="relative mt-1  group-hover:text-cyan-800 text-red-500 text-2xl">
                                 <HiOutlineShoppingBag />
                               </span>
+                              <span>{list?.length}</span>
                             </div>
                           </Link>
                         </li>

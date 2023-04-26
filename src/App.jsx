@@ -12,6 +12,7 @@ import Profile from './components/pages/dashboard/user/Profile';
 import { useGetRestaurantsQuery } from './features/api/apiSlice';
 import Loading from './components/shared/Loading';
 import RestaurantsFood from './components/pages/orderNow/RestaurantsFood';
+import BuyNow from './components/pages/orderNow/BuyNow';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/login" element={<LogIn />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/restaurantfood/:id" element={<RestaurantsFood />}></Route>
+        <Route path="/cart" element={<BuyNow />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
 
         <Route path="dashboard" element={<Dashboard />}>

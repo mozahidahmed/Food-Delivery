@@ -2,10 +2,13 @@ import React from 'react';
 import { useNavigate, useParams } from "react-router-dom";
 import { useGetRestaurantByIdQuery } from '../../../features/api/apiSlice';
 import Loading from '../../shared/Loading';
+import { AiOutlinePlus } from "react-icons/ai";
+
 
 
 const RestaurantsFood = () => {
   const { id } = useParams();
+
   const { data, isLoading, isSuccess } = useGetRestaurantByIdQuery(id, {
     pollingInterval: 500,
   });
@@ -15,10 +18,12 @@ const RestaurantsFood = () => {
     <Loading />;
   }
   if (isSuccess) {
-    console.log(data);
+    // console.log(data);
   }
 
-   
+
+
+ 
   return (
     <div className="px-6 py-6">
       <div className="card shadow-xl">
@@ -39,36 +44,43 @@ const RestaurantsFood = () => {
           </h1>
         </div>
       </div>
-      
-        <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  px-16 py-6 gap-4">
-          {data?.food.map((food) => (
-            <>
-              <div className="card shadow-xl">
-                <img src={food.fimg} alt="aly" />
-                <div className="mt-2 p-2">
-                  <div className="flex justify-between items-center">
-                    <h1 className="font-bold">{food.fname}</h1>
 
-                    <div className="flex gap-2 items-center">
-                      <h1 className="font-bold clas">$ {food.price}</h1>
-                    </div>
+      <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  px-16 py-6 gap-4">
+        {data?.food.map((food) => (
+          <>
+            <div className="card shadow-xl">
+              <img src={food.fimg} alt="aly" />
+              <div className="mt-2 p-2">
+                <div className="flex justify-between items-center">
+                  <h1 className="font-bold">{food.fname}</h1>
+
+                  <div className="flex gap-2 items-center">
+                    <h1 className="font-bold ">$ {food.price}</h1>
                   </div>
-                  <h1 className="mt-2">{food.ftype}</h1>
+                </div>
+                <div className="flex justify-between items-center mt-2">
+                  <h1 className="">{food.ftype}</h1>
+                  <h1 className="">
+                    <AiOutlinePlus
+                
+                      className="rounded-full text-2xl bg-red-500 text-white font-bold"
+                    ></AiOutlinePlus>
+                  </h1>
                 </div>
               </div>
-            </>
-          ))}
-        </div>
-
-        <div className="bg-red-500 p-5">
-          <h1>Food Name: </h1>
-          <h1>price: </h1>
-          <h1>Del fee: </h1>
-          <h1>total </h1>
-          bu
-        </div>
+            </div>
+          </>
+        ))}
       </div>
-   
+
+      <div className="bg-red-500 p-5">
+        <h1>Food Name: </h1>
+        <h1>price: </h1>
+        <h1>Del fee: </h1>
+        <h1>total </h1>
+        bu
+      </div>
+    </div>
   );
 };
 
