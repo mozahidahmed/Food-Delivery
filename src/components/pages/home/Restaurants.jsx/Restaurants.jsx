@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
 const Restaurants = () => {
   const navigate = useNavigate();
 
@@ -21,8 +22,11 @@ const Restaurants = () => {
 
 
     return (
-      <div>
-        <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  px-16 py-6 gap-4">
+      <div className="py-12">
+       
+        <h1 className="text-3xl text-center mb-2">OUR  RESTAURANTS</h1>
+        <p className="text-center">Get your favourite food in 4 simple steps</p>
+        <div className="grid lg:grid-cols-3  md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  px-16 py-6 gap-4">
           {data?.map((data) => (
             <>
               <div

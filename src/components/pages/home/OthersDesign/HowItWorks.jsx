@@ -9,7 +9,8 @@ const HowItWorks = () => {
           backgroundImage: `url("https://www.khanidani.com/assets/images/works.jpg")`,
         }}
       >
-        <h1 className="text-center text-3xl mb-2 font-bold">How it works</h1>
+       
+        <h1 className="text-3xl text-center mb-2">HOW IT WORK</h1>
         <p className="text-center">Get your favourite food in 4 simple steps</p>
         <div className="grid lg:grid-cols-4 justify-center py-2 sm:grid-cols-2 gap-4">
           <div className="card   shadow-xl p-12 rounded-xl">

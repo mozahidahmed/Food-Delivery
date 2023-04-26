@@ -5,7 +5,7 @@ const SearchHero = () => {
       <div
         className="py-48 px-12"
         style={{
-          backgroundImage: `url("https://winsfolio.net/html/foodio/assets/img/bbq.jpg")`,
+          backgroundImage: `url("https://i.ibb.co/bBF0TYK/Image.png")`,
         }}
       >
         <h1 className="text-4xl text-center text-white">
@@ -20,7 +20,7 @@ const SearchHero = () => {
           />
 
           <button className="bg-red-500 py-4 rounded-xl px-12 font-bold text-white">
-            Search
+            Subscribe
           </button>
         </div>
       </div>

@@ -2,9 +2,9 @@ import React from "react";
 
 const WelcomeRestaurant = () => {
   return (
-    <div className="bg-[#dee2e6]">
+    <div className="">
       <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 px-12 py-6 ">
-        <div className="">
+        <div className="grid justify-center">
           <img
             src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/about3.webp"
             alt=""
@@ -53,7 +53,7 @@ const WelcomeRestaurant = () => {
           </div>
           <div className="flex justify-center items-center gap-2">
             <img
-              src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/8-410x410.jpg"
+              src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/6-1-150x150.jpg"
               alt=""
               className="w-[20%] rounded-xl"
             />
@@ -64,7 +64,7 @@ const WelcomeRestaurant = () => {
           </div>
           <div className="flex justify-center items-center gap-2">
             <img
-              src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/8-410x410.jpg"
+              src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/7-150x150.jpg"
               alt=""
               className="w-[20%] rounded-xl"
             />
@@ -75,7 +75,7 @@ const WelcomeRestaurant = () => {
           </div>
           <div className="flex justify-center items-center gap-2">
             <img
-              src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/8-410x410.jpg"
+              src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/5-1-150x150.jpg"
               alt=""
               className="w-[20%] rounded-xl"
             />
@@ -86,7 +86,7 @@ const WelcomeRestaurant = () => {
           </div>
           <div className="flex justify-center items-center gap-2">
             <img
-              src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/8-410x410.jpg"
+              src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/4-1-150x150.jpg"
               alt=""
               className="w-[20%] rounded-xl"
             />

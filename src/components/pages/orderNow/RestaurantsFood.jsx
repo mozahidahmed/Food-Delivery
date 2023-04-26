@@ -29,7 +29,7 @@ const RestaurantsFood = () => {
       dispatch(
         addToCart(food)
       );
-      alert("Successfully!");
+      alert("added Successfully!");
     };
 
  

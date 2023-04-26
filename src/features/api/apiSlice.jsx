@@ -5,7 +5,7 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000/",
   }),
-  tagTypes: ["restaurants", "restaurant"],
+  tagTypes: ["restaurants", "restaurant", "order"],
   endpoints: (builder) => ({
     getRestaurants: builder.query({
       query: () => ({
@@ -19,11 +19,20 @@ export const apiSlice = createApi({
       }),
       providesTags: ["restaurant"],
     }),
+    addOrder: builder.mutation({
+      query: (data) => ({
+        method: "POST",
+        url: "/order",
+        body: data,
+      }),
+      invalidatesTags: ["order"],
+    }),
   }),
 });
 
 export const {
  useGetRestaurantsQuery,
- useGetRestaurantByIdQuery
+ useGetRestaurantByIdQuery,
+ useAddOrderMutation
  
 } = apiSlice;
