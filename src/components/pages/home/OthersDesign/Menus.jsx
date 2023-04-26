@@ -10,7 +10,7 @@ const Menus = () => {
         </p>
 
         <div className="">
-          <div className="grid lg:grid-cols-4 py-6">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 py-6">
             <div className="grid justify-center">
               <img
                 src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/8-300x400.jpg"
