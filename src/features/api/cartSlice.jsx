@@ -7,9 +7,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      // check product is already exist
       const exist = state.find((product) => product._id === action.payload._id);
-      // if product already added, then increase the quantity
       if (exist) {
         return state.map((product) =>
           product._id === action.payload._id
@@ -20,12 +18,11 @@ const cartSlice = createSlice({
         return [...state, { ...action.payload, qty: 1 }];
       }
     },
+
     deleteToCart: (state, action) => {
-      // check product is already exist
       const exist1 = state.find(
         (product) => product._id === action.payload._id
       );
-      // if product already added, then decrease the quantity
       if (exist1.qty === 1) {
         return state.filter((product) => product._id !== exist1._id);
       } else {

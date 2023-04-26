@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
    const [user] = useAuthState(auth);
-   const {list}=useSelector(state=>state.cart)
+   const list=useSelector((state)=>state.cart)
 
    
    const logout = () => {

@@ -3,11 +3,15 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useGetRestaurantByIdQuery } from '../../../features/api/apiSlice';
 import Loading from '../../shared/Loading';
 import { AiOutlinePlus } from "react-icons/ai";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../../features/api/cartSlice';
+
 
 
 
 const RestaurantsFood = () => {
   const { id } = useParams();
+ const dispatch = useDispatch();
 
   const { data, isLoading, isSuccess } = useGetRestaurantByIdQuery(id, {
     pollingInterval: 500,
@@ -21,7 +25,12 @@ const RestaurantsFood = () => {
     // console.log(data);
   }
 
-
+    const handleAddToCart = (food) => {
+      dispatch(
+        addToCart(food)
+      );
+      alert("Successfully!");
+    };
 
  
   return (
@@ -62,7 +71,7 @@ const RestaurantsFood = () => {
                   <h1 className="">{food.ftype}</h1>
                   <h1 className="">
                     <AiOutlinePlus
-                
+                      onClick={() => handleAddToCart(food)}
                       className="rounded-full text-2xl bg-red-500 text-white font-bold"
                     ></AiOutlinePlus>
                   </h1>
@@ -73,13 +82,6 @@ const RestaurantsFood = () => {
         ))}
       </div>
 
-      <div className="bg-red-500 p-5">
-        <h1>Food Name: </h1>
-        <h1>price: </h1>
-        <h1>Del fee: </h1>
-        <h1>total </h1>
-        bu
-      </div>
     </div>
   );
 };
