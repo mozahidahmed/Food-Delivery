@@ -5,7 +5,7 @@ const SearchHero = () => {
       <div
         className="py-48 px-12"
         style={{
-          backgroundImage: `url("https://i.ibb.co/nz0km6D/342503319-140442705542636-4010482716675888779-n-1.jpg")`,
+          backgroundImage: `url("https://winsfolio.net/html/foodio/assets/img/bbq.jpg")`,
         }}
       >
         <h1 className="text-4xl text-center text-white">
