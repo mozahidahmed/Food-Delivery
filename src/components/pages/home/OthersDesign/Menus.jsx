@@ -6,25 +6,25 @@ const Menus = () => {
         <h1 className="text-3xl ">SET MENUS</h1>
         <p className="">Selected with custamer reviews</p>
         <div className="grid lg:grid-cols-4  md:grid-cols-2  gap-2 py-6">
-          <div className="">
+          <div className="menu_wrapper">
             <img
               src="	https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/8-300x400.jpg"
               alt=""
             />
           </div>
-          <div className="">
+          <div className="menu_wrapper">
             <img
               src="https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/6-1-300x400.jpg"
               alt=""
             />
           </div>
-          <div className="">
+          <div className="menu_wrapper">
             <img
               src="	https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/7-300x400.jpg"
               alt=""
             />
           </div>
-          <div className="">
+          <div className="menu_wrapper">
             <img
               src="	 https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/5-1-300x400.jpg"
               alt=""
