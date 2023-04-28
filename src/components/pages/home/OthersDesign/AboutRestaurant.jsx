@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutRestaurant = () => {
   return (
-    <div className="py-24">
+    <div className="py-24 ">
       <h1 className="text-center">ABOUT RESTAURANT</h1>
       <p className="text-center mt-4">
         Food, in the end, in our own tradition, is something holy. It’s not{" "}

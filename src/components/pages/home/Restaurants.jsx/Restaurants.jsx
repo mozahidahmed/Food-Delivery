@@ -11,14 +11,16 @@ import { useNavigate } from 'react-router-dom';
 
 const Restaurants = () => {
   const navigate = useNavigate();
-
- const { data, isLoading ,isSuccess} = useGetRestaurantsQuery();
+  const { data, isLoading ,isSuccess} = useGetRestaurantsQuery();
   if (isLoading) {
     <Loading />
   }
   // if (isSuccess) {
   //   console.log(data);
   // }
+
+
+
 
 
     return (

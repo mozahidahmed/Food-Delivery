@@ -8,7 +8,7 @@ const SearchHero = () => {
           backgroundImage: `url("https://wossthemes.com/jack/wp-content/uploads/2018/01/blog_image_7.jpg")`,
         }}
       >
-        <h1 className="text-4xl text-center text-white">
+        <h1 className="text-4xl text-center text-white hover:text-red-500">
           It's the food and groceries you love, delivered
         </h1>
 

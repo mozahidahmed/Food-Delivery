@@ -61,9 +61,11 @@ const Menus = () => {
   };
 
   return (
-    <div className="container mx-auto  py-12">
-      <h1 className="text-3xl  mb-2">Menus</h1>
- 
+    <div className="container mx-auto py-12">
+      <h1 className="text-3xl  mb-2 lg:text-start md:text-center text-center">
+        Menus
+      </h1>
+
       <Carousel responsive={responsive}>
         <div className="menu_wrapper">
           <img

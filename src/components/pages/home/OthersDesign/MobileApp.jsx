@@ -6,7 +6,7 @@ import { AiFillApple } from "react-icons/ai";
 const MobileApp = () => {
   return (
     <div className=" bg-[#dee2e6]">
-      <div className="grid py-2  lg:grid-cols-2 md:grid-cols-2  justify-center items-center container mx-auto ">
+      <div className="grid py-2  lg:grid-cols-2 md:grid-cols-2  justify-center items-center container px-6 ">
         <div className="mt-2">
           <h2 className="font-bold text-red-600">
             BEST APP FOR FOODS ORDERING
