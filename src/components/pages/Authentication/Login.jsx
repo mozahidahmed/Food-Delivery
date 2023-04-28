@@ -1,11 +1,13 @@
-
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Loading from "../../shared/Loading";
+import useToken from "../../../hooks/useToken";
 
 const LogIn = () => {
+ 
+  
   const {
     register,
     formState: { errors },
@@ -14,10 +16,14 @@ const LogIn = () => {
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-    const navigate = useNavigate();
+     const location = useLocation();
+  const navigate = useNavigate();
+  const [token] = useToken(user);
 
-  if (user) {
-    console.log(user);
+
+  let from = location.state?.from?.pathname || "";
+  if (token) {
+    navigate(from, { replace: true });
   }
 
   let signInError;
@@ -37,7 +43,7 @@ const LogIn = () => {
   const onSubmit = (data) => {
     console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
-    navigate("/home");
+ 
   };
 
   return (

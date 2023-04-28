@@ -1,25 +1,23 @@
-import React from 'react';
-
+import auth from "../../../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
 const Profile = () => {
-    return (
-      <div className="p-6">
-     
-        <h1 className="font-bold text-4xl">profile</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
-          similique aut animi quisquam illum suscipit velit iure necessitatibus,
-          soluta saepe repellendus totam iste unde quasi, excepturi quas.
-          Temporibus eum ducimus saepe enim fugit tempora, vel aspernatur ex
-          est! Molestias repudiandae quis consequuntur laboriosam eligendi!
-          Facilis quae culpa rem dolor minus eligendi reprehenderit quos quis
-          perspiciatis fugiat error sapiente debitis, vitae officiis dignissimos
-          molestiae quibusdam cupiditate esse provident? Quia natus quam
-          corrupti ratione, odit exercitationem sit totam illo id neque veniam
-          sed molestiae excepturi assumenda fuga quis quisquam minus. Quod amet
-          quibusdam magni nam earum quasi quis aperiam ea at perspiciatis?
-        </p>
+  const [user] = useAuthState(auth);
+
+  return (
+    <div className="p-6">
+      <div className="flex justify-center items-center">
+        <div>
+          <h1 className="font-bold text-4xl">Hey!!!</h1>
+          <h3 className="font-bold text-4xl text-red-500">
+            {user?.displayName}
+          </h3>
+          <p className="text-2xl text-orange-600">These is your Profile</p>
+          <h4 className="font-bold text-xl">Name: {user?.displayName}</h4>
+          <h4 className="font-bold text-xl">Email: {user?.email}</h4>
+        </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Profile;

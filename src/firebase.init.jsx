@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDF0_qn4SMKx-gBNaS-BX7uvMAzBBsflSk",
-  authDomain: "quick-start-7efb6.firebaseapp.com",
-  projectId: "quick-start-7efb6",
-  storageBucket: "quick-start-7efb6.appspot.com",
-  messagingSenderId: "502689170391",
-  appId: "1:502689170391:web:287bf123a79d60645d0192",
+  apiKey: "AIzaSyDf__WwRihXUXbkgI0PTVrIYWnmf-oaKqE",
+  authDomain: "pandami.firebaseapp.com",
+  projectId: "pandami",
+  storageBucket: "pandami.appspot.com",
+  messagingSenderId: "258244102570",
+  appId: "1:258244102570:web:31de0a8a0ccc47a01503d3",
 };
 
 

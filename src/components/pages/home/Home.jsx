@@ -6,7 +6,7 @@ import Reviews from './reviews/Reviews';
 import About from './OthersDesign/About';
 import TwoCart from './OthersDesign/TwoCart';
 import Restaurants from './Restaurants.jsx/Restaurants';
-import WelcomeRestaurant from './OthersDesign/WelcomeRestaurant';
+import AboutRestaurant from "./OthersDesign/AboutRestaurant";
 import Menus from './OthersDesign/Menus';
 import AboutTeam from './OthersDesign/AboutTeam';
 import PopularRestaurants from './OthersDesign/PopularRestaurants';
@@ -14,20 +14,21 @@ import Celebration from './OthersDesign/Celebration';
 import Ldb from './OthersDesign/Ldb';
 
 
+
 const Home = () => {
     return (
       <div>
         <SearchHero />
-        <WelcomeRestaurant/>
-        <Ldb/>
-        <Menus/>
-        <PopularRestaurants/>
-        <Celebration/>
+        <AboutRestaurant />
+        <Ldb />
+        <Menus />
+        <PopularRestaurants />
+        <Celebration />
         <HowItWorks />
-        <Restaurants/>
+        <Restaurants />
         <TwoCart />
         <About />
-        <AboutTeam/>
+        <AboutTeam />
 
         <MobileApp />
         <Reviews />

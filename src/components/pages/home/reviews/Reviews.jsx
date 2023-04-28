@@ -5,12 +5,17 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
+import { useGetReviewQuery } from "../../../../features/api/ApiSlice";
 
 const Reviews = () => {
+  const {data,isLoading,isError}=useGetReviewQuery()
+  
     return (
       <div className="px-6">
         <div className="py-12">
-          <h1 className="text-3xl text-center font-bold mb-6">What People "Say" About Us</h1>
+          <h1 className="text-3xl text-center font-bold mb-6">
+            What People "Say" About Us
+          </h1>
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -21,114 +26,28 @@ const Reviews = () => {
             modules={[FreeMode, Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <div className="card border p-6 rounded-xl">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  libero non consectetur saepe fugit? Voluptates, officia? In
-                  cumque sapiente ipsum.
-                </p>
-                <div className="flex justify-between items-center mt-2">
-                  <h1 className="text-2xl font-bold">Mozahid</h1>
-                  <div className="flex">
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
+            {data?.map((review) => (
+              <>
+                <SwiperSlide>
+                  <div className="card border p-6 rounded-xl">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quod libero non consectetur saepe fugit? Voluptates,
+                      officia? In cumque sapiente ipsum.
+                    </p>
+                    <div className="flex justify-between items-center mt-2">
+                      <h1 className="text-2xl font-bold">{review.name}</h1>
+                      <div className="flex">
+                        <AiFillStar className="text-yellow-400"></AiFillStar>
+                        <AiFillStar className="text-yellow-400"></AiFillStar>
+                        <AiFillStar className="text-yellow-400"></AiFillStar>
+                        <AiFillStar className="text-yellow-400"></AiFillStar>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card border p-6 rounded-xl">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  libero non consectetur saepe fugit? Voluptates, officia? In
-                  cumque sapiente ipsum.
-                </p>
-                <div className="flex justify-between items-center mt-2">
-                  <h1 className="text-2xl font-bold">Mozahid</h1>
-                  <div className="flex">
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card border p-6 rounded-xl">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  libero non consectetur saepe fugit? Voluptates, officia? In
-                  cumque sapiente ipsum.
-                </p>
-                <div className="flex justify-between items-center mt-2">
-                  <h1 className="text-2xl font-bold">Mozahid</h1>
-                  <div className="flex">
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card border p-6 rounded-xl">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  libero non consectetur saepe fugit? Voluptates, officia? In
-                  cumque sapiente ipsum.
-                </p>
-                <div className="flex justify-between items-center mt-2">
-                  <h1 className="text-2xl font-bold">Mozahid</h1>
-                  <div className="flex">
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card border p-6 rounded-xl">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  libero non consectetur saepe fugit? Voluptates, officia? In
-                  cumque sapiente ipsum.
-                </p>
-                <div className="flex justify-between items-center mt-2">
-                  <h1 className="text-2xl font-bold">Mozahid</h1>
-                  <div className="flex">
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card border p-6 rounded-xl">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  libero non consectetur saepe fugit? Voluptates, officia? In
-                  cumque sapiente ipsum.
-                </p>
-                <div className="flex justify-between items-center mt-2">
-                  <h1 className="text-2xl font-bold">Mozahid</h1>
-                  <div className="flex">
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                    <AiFillStar className="text-yellow-400"></AiFillStar>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+                </SwiperSlide>
+              </>
+            ))}
           </Swiper>
         </div>
       </div>
