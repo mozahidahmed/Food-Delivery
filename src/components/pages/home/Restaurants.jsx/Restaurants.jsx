@@ -25,14 +25,13 @@ const Restaurants = () => {
 
     return (
       <div className="py-12">
-       
-        <h1 className="text-3xl text-center mb-2">OUR  RESTAURANTS</h1>
+        <h1 className="text-3xl text-center mb-2">RESTAURANTS FOODS</h1>
         <p className="text-center">Get your favourite food in 4 simple steps</p>
-        <div className="grid lg:grid-cols-3  md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  px-16 py-6 gap-4">
+        <div className="grid lg:grid-cols-4   md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  px-16 py-6 gap-4">
           {data?.map((data) => (
             <>
               <div
-                className="card shadow-xl"
+                className="card shadow-xl "
                 onClick={() => navigate(`/restaurantfood/${data._id}`)}
               >
                 <img src={data.resimg} alt="" />

@@ -1,9 +1,30 @@
 import React, { useEffect } from 'react';
-import { useGetAllUserQuery } from "../../../../features/api/apiSlice";
+import Loading from '../../../shared/Loading';
+import MakeAdmin from './MakeAdmin';
+import { useQuery } from "react-query";
+
 
 const AllUser = () => {
-    const { data, isLoading, isSuccess, isError } = useGetAllUserQuery();
-    console.log(data)
+    
+    
+       const {
+         data: users,
+         isLoading,
+         refetch,
+       } = useQuery("users", () =>
+         fetch("http://localhost:5000/user", {
+           method: "GET",
+           headers: {
+             authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+           },
+         }).then((res) => res.json())
+       );
+       if (isLoading) {
+         return <Loading></Loading>;
+       }
+ 
+   
+     
    
     
     return (
@@ -14,30 +35,15 @@ const AllUser = () => {
               <th className="px-4 py-2">Index</th>
               <th className="px-4 py-2">Email</th>
               <th className="px-4 py-2">Action</th>
-              
             </tr>
           </thead>
           <tbody>
-            {data?.map((user, index) => (
-              <>
-                <tr>
-                  <th className="border px-4 py-2">{index + 1}</th>
-                  
-                  
-                  <td className="border px-4 py-2">{user?.email} </td>
-                  
-                  <td className="border px-4 py-2">
-                    <button
-                      
-                      className="bg-red-500 px-2 rounded text-white"
-                    >
-                      MakeAdmin
-                    </button>
-                  </td>
-                </tr>
-              </>
-            ))}
-            ;
+
+            {users?.map((user,index) => (
+              <MakeAdmin user={user} index={index} refetch={refetch}></MakeAdmin>
+            ))
+          }
+
           </tbody>
         </table>
       </div>

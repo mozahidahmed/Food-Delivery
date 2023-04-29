@@ -4,7 +4,7 @@ const Profile = () => {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="p-6">
+    <div className=" h-screen">
       <div className="flex justify-center items-center">
         <div>
           <h1 className="font-bold text-4xl">Hey!!!</h1>

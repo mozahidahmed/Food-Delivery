@@ -77,6 +77,13 @@ export const apiSlice = createApi({
       }),
       invalidatesTags: ["allfood", "food"],
     }),
+    deleteUser: builder.mutation({
+      query: (id) => ({
+        url: `/user/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["user"],
+    }),
     addFood: builder.mutation({
       query: (data) => ({
         url: "/addfood",
@@ -105,6 +112,7 @@ export const {
  useDeleteFoodMutation,
  useGetAllFoodQuery,
  useAddFoodMutation,
- useGetAllUserQuery
+ useGetAllUserQuery,
+ useDeleteUserMutation
  
 } = apiSlice;

@@ -1,4 +1,5 @@
 import Home from './components/pages/home/Home';
+import { ToastContainer } from "react-toastify";
 import { Route, Routes } from 'react-router';
 import Navbar from './components/shared/Navbar';
 import Footer from './components/shared/Footer';
@@ -29,7 +30,14 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/login" element={<LogIn />}></Route>
-        <Route path="/blogs" element={<RequireAuth ><Blogs></Blogs></RequireAuth>}></Route>
+        <Route
+          path="/blogs"
+          element={
+            <RequireAuth>
+              <Blogs></Blogs>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/restaurantfood/:id" element={<RestaurantsFood />}></Route>
         <Route
@@ -54,7 +62,7 @@ function App() {
       </Routes>
 
       <Footer />
-      
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

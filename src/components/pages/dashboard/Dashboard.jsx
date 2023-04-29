@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link, Outlet } from "react-router-dom";
+import useAdmin from '../../../hooks/useAdmin';
+import auth from '../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Dashboard = () => {
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
     return (
       <div className="">
         <div className="grid lg:grid-cols-12">
@@ -10,21 +15,35 @@ const Dashboard = () => {
               <Link to="profile">
                 <h1 className="font-bold  p-2 px-6">profile</h1>
               </Link>
-              <Link to="addreview">
-                <h1 className="font-bold  p-2 px-6">Reviews</h1>
-              </Link>
-              <Link to="myorder">
-                <h1 className="font-bold  p-2 px-6">Orders</h1>
-              </Link>
-              <Link to="managefoods">
-                <h1 className="font-bold  p-2 px-6">Manage Foods</h1>
-              </Link>
-              <Link to="addfood">
-                <h1 className="font-bold  p-2 px-6">Add Foods</h1>
-              </Link>
-              <Link to="alluser">
-                <h1 className="font-bold  p-2 px-6">All User</h1>
-              </Link>
+
+              {!admin && (
+                <>
+               
+                    <Link to="myorder">
+                      <h1 className="font-bold  p-2 px-6">Orders</h1>
+                    </Link>
+                
+
+               
+                    <Link to="addreview">
+                      <h1 className="font-bold  p-2 px-6">Reviews</h1>
+                    </Link>
+                
+                </>
+              )}
+              {admin && (
+                <>
+                  <Link to="managefoods">
+                    <h1 className="font-bold  p-2 px-6">Manage Foods</h1>
+                  </Link>
+                  <Link to="addfood">
+                    <h1 className="font-bold  p-2 px-6">Add Foods</h1>
+                  </Link>
+                  <Link to="alluser">
+                    <h1 className="font-bold  p-2 px-6">All User</h1>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
           <div className="col-start-4 col-end-12">

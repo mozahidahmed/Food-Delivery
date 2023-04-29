@@ -22,12 +22,15 @@ const Home = () => {
         <AboutRestaurant />
         <Ldb />
         <Menus />
+        <Restaurants />
         <PopularRestaurants />
         <Celebration />
+        <AboutRestaurant />
         <HowItWorks />
-        <Restaurants />
+
         <TwoCart />
         <About />
+
         <AboutTeam />
 
         <MobileApp />
