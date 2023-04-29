@@ -15,6 +15,7 @@ import RequireAuth from './components/pages/Authentication/RequireAuth';
 import Blogs from './components/pages/blog/Blogs';
 import ManageFood from './components/pages/dashboard/admin/ManageFood';
 import AddFood from './components/pages/dashboard/admin/AddFood';
+import AllUser from './components/pages/dashboard/admin/AllUser';
 
 
 function App() {
@@ -48,10 +49,12 @@ function App() {
           <Route path="addreview" element={<AddReview></AddReview>}></Route>
           <Route path="managefoods" element={<ManageFood></ManageFood>}></Route>
           <Route path="addfood" element={<AddFood></AddFood>}></Route>
+          <Route path="alluser" element={<AllUser></AllUser>}></Route>
         </Route>
       </Routes>
 
       <Footer />
+      
     </div>
   );
 }

@@ -22,6 +22,9 @@ const Dashboard = () => {
               <Link to="addfood">
                 <h1 className="font-bold  p-2 px-6">Add Foods</h1>
               </Link>
+              <Link to="alluser">
+                <h1 className="font-bold  p-2 px-6">All User</h1>
+              </Link>
             </div>
           </div>
           <div className="col-start-4 col-end-12">

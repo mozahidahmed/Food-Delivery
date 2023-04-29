@@ -12,6 +12,7 @@ export const apiSlice = createApi({
     "reviews",
     "myorder",
     "allfood",
+    "user",
     "food",
     "addfood",
   ],
@@ -84,6 +85,12 @@ export const apiSlice = createApi({
       }),
       providesTags: ["addfood"],
     }),
+  getAllUser: builder.query({
+      query: () => ({
+        url: "/user",
+      }),
+      providesTags: ["user"],
+    }),
   }),
 });
 
@@ -97,6 +104,7 @@ export const {
  useDeleteOrderMutation,
  useDeleteFoodMutation,
  useGetAllFoodQuery,
- useAddFoodMutation
+ useAddFoodMutation,
+ useGetAllUserQuery
  
 } = apiSlice;
