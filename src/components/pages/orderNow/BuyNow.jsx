@@ -32,14 +32,13 @@ const BuyNow = () => {
 
 
      const handleOrder  =()=> {
-      const orderData ={
-         totalPrice : quantity * cart[0]?.price + parseInt(select),
-         quantity:quantity,
-         name: cart[0]?.fname,
-         email:user?.email
-     
-
-      }
+      const orderData = {
+        totalPrice: quantity * cart[0]?.price + parseInt(select),
+        quantity: quantity,
+        img: cart[0]?.fimg,
+        name: cart[0]?.fname,
+        email: user?.email,
+      };
        console.log(orderData);
        postOrder(orderData)
      };

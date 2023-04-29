@@ -9,23 +9,16 @@ import Welcome from './components/pages/dashboard/Welcome';
 import MyOrder from './components/pages/dashboard/user/MyOrder';
 import AddReview from './components/pages/dashboard/user/AddReview';
 import Profile from './components/pages/dashboard/user/Profile';
-import { useGetRestaurantsQuery } from './features/api/apiSlice';
-import Loading from './components/shared/Loading';
 import RestaurantsFood from './components/pages/orderNow/RestaurantsFood';
 import BuyNow from './components/pages/orderNow/BuyNow';
 import RequireAuth from './components/pages/Authentication/RequireAuth';
 import Blogs from './components/pages/blog/Blogs';
+import ManageFood from './components/pages/dashboard/admin/ManageFood';
+import AddFood from './components/pages/dashboard/admin/AddFood';
 
 
 function App() {
 
-  const {data,isLoading,isSuccess}=useGetRestaurantsQuery()
-  if(isLoading){
-    <Loading/>
-  }
-  if(isSuccess){
-      console.log(data);
-  }
 
   return (
     <div className="">
@@ -53,6 +46,8 @@ function App() {
           <Route path="profile" element={<Profile></Profile>}></Route>
           <Route path="myorder" element={<MyOrder></MyOrder>}></Route>
           <Route path="addreview" element={<AddReview></AddReview>}></Route>
+          <Route path="managefoods" element={<ManageFood></ManageFood>}></Route>
+          <Route path="addfood" element={<AddFood></AddFood>}></Route>
         </Route>
       </Routes>
 

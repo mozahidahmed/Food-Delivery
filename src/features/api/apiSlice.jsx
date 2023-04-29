@@ -5,7 +5,16 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000/",
   }),
-  tagTypes: ["restaurants", "restaurant", "order", "reviews"],
+  tagTypes: [
+    "restaurants",
+    "restaurant",
+    "order",
+    "reviews",
+    "myorder",
+    "allfood",
+    "food",
+    "addfood",
+  ],
   endpoints: (builder) => ({
     getRestaurants: builder.query({
       query: () => ({
@@ -41,6 +50,40 @@ export const apiSlice = createApi({
       }),
       providesTags: ["reviews"],
     }),
+    getOrderWithEmail: builder.query({
+      query: (email) => ({
+        url: `myorder?email=${email}`,
+      }),
+      providesTags: ["myorder"],
+    }),
+    deleteOrder: builder.mutation({
+      query: (id) => ({
+        url: `/myorder/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["myorder", "order"],
+    }),
+    getAllFood: builder.query({
+      query: () => ({
+        url: "/allfood",
+      }),
+      providesTags: ["allfood"],
+    }),
+    deleteFood: builder.mutation({
+      query: (id) => ({
+        url: `/allfood/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["allfood", "food"],
+    }),
+    addFood: builder.mutation({
+      query: (data) => ({
+        url: "/addfood",
+        method: "POST",
+        body: data,
+      }),
+      providesTags: ["addfood"],
+    }),
   }),
 });
 
@@ -49,6 +92,11 @@ export const {
  useGetRestaurantByIdQuery,
  useAddOrderMutation,
  useAddReviewMutation,
- useGetReviewQuery
+ useGetReviewQuery,
+ useGetOrderWithEmailQuery,
+ useDeleteOrderMutation,
+ useDeleteFoodMutation,
+ useGetAllFoodQuery,
+ useAddFoodMutation
  
 } = apiSlice;
