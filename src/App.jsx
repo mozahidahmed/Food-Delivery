@@ -17,6 +17,14 @@ import Blogs from './components/pages/blog/Blogs';
 import ManageFood from './components/pages/dashboard/admin/ManageFood';
 import AddFood from './components/pages/dashboard/admin/AddFood';
 import AllUser from './components/pages/dashboard/admin/AllUser';
+import Gift from './components/pages/celebration/Gift';
+import BirthDay from './components/pages/celebration/BirthDay';
+import Party from './components/pages/celebration/Party';
+import Drink from './components/pages/celebration/Drink';
+import Lunch from './components/pages/bdl/Lunch';
+import BreakFast from './components/pages/bdl/BreakFast';
+import Dinner from './components/pages/bdl/Dinner';
+import MorningCoffee from './components/pages/bdl/MorningCoffee';
 
 
 function App() {
@@ -30,6 +38,19 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/login" element={<LogIn />}></Route>
+        
+        {/* celevration food  */}
+        <Route path="/gift" element={<Gift />}></Route>
+        <Route path="/birthday" element={<BirthDay />}></Route>
+        <Route path="/party" element={<Party />}></Route>
+        <Route path="/drink" element={<Drink />}></Route>
+        
+        {/* menu food  */}
+        <Route path="/breakfast" element={<BreakFast />}></Route>
+        <Route path="/lunch" element={<Lunch />}></Route>
+        <Route path="/dinner" element={<Dinner />}></Route>
+        <Route path="/morningcoffee" element={<MorningCoffee />}></Route>
+        
         <Route
           path="/blogs"
           element={

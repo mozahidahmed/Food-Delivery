@@ -15,6 +15,10 @@ export const apiSlice = createApi({
     "user",
     "food",
     "addfood",
+    "nightdrink",
+    "gift",
+    "birthday",
+    "party",
   ],
   endpoints: (builder) => ({
     getRestaurants: builder.query({
@@ -29,6 +33,7 @@ export const apiSlice = createApi({
       }),
       providesTags: ["restaurant"],
     }),
+
     addOrder: builder.mutation({
       query: (data) => ({
         method: "POST",
@@ -92,11 +97,59 @@ export const apiSlice = createApi({
       }),
       providesTags: ["addfood"],
     }),
-  getAllUser: builder.query({
+    getAllUser: builder.query({
       query: () => ({
         url: "/user",
       }),
       providesTags: ["user"],
+    }),
+    getDrink: builder.query({
+      query: () => ({
+        url: "/nightdrink",
+      }),
+      providesTags: ["nightdrink"],
+    }),
+    getGift: builder.query({
+      query: () => ({
+        url: "/gift",
+      }),
+      providesTags: ["gift"],
+    }),
+    getBirthDay: builder.query({
+      query: () => ({
+        url: "/birthday",
+      }),
+      providesTags: ["birthday"],
+    }),
+    getParty: builder.query({
+      query: () => ({
+        url: "/party",
+      }),
+      providesTags: ["party"],
+    }),
+    getBreakfast: builder.query({
+      query: () => ({
+        url: "/breakfast",
+      }),
+      providesTags: ["breakfast"],
+    }),
+    getLunch: builder.query({
+      query: () => ({
+        url: "/lunch",
+      }),
+      providesTags: ["lunch"],
+    }),
+    getDinner: builder.query({
+      query: () => ({
+        url: "/dinner",
+      }),
+      providesTags: ["dinner"],
+    }),
+    getMorningCoffee: builder.query({
+      query: () => ({
+        url: "/morningcoffee",
+      }),
+      providesTags: ["morningcoffee"],
     }),
   }),
 });
@@ -113,6 +166,20 @@ export const {
  useGetAllFoodQuery,
  useAddFoodMutation,
  useGetAllUserQuery,
- useDeleteUserMutation
+ useDeleteUserMutation,
+
+ useGetDrinkQuery,
+ useGetBirthDayQuery,
+ useGetGiftQuery,
+ useGetPartyQuery,
+
+ useGetBreakfastQuery,
+ useGetLunchQuery,
+ useGetDinnerQuery,
+ useGetMorningCoffeeQuery,
+
+
+
+
  
 } = apiSlice;

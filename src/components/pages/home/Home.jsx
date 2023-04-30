@@ -9,9 +9,9 @@ import Restaurants from './Restaurants.jsx/Restaurants';
 import AboutRestaurant from "./OthersDesign/AboutRestaurant";
 import Menus from './OthersDesign/Menus';
 import AboutTeam from './OthersDesign/AboutTeam';
-import PopularRestaurants from './OthersDesign/PopularRestaurants';
-import Celebration from './OthersDesign/Celebration';
-import Ldb from './OthersDesign/Ldb';
+import Celebration from '../celebration/Celebration';
+import Ldb from '../bdl/Ldb';
+
 
 
 
@@ -20,11 +20,10 @@ const Home = () => {
       <div>
         <SearchHero />
         <AboutRestaurant />
-        <Ldb />
+        <Ldb/>
         <Menus />
         <Restaurants />
-        <PopularRestaurants />
-        <Celebration />
+        <Celebration/>
         <AboutRestaurant />
         <HowItWorks />
 
