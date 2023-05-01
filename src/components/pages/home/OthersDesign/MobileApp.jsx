@@ -6,12 +6,12 @@ import { AiFillApple } from "react-icons/ai";
 const MobileApp = () => {
   return (
     <div className=" bg-[#dee2e6]">
-      <div className="grid py-2  lg:grid-cols-2 md:grid-cols-2  justify-center items-center container px-6 ">
+      <div className="grid py-2  lg:grid-cols-2 md:grid-cols-2  justify-center items-center container mx-auto ">
         <div className="mt-2">
           <h2 className="font-bold text-red-600">
             BEST APP FOR FOODS ORDERING
           </h2>
-          <h1 className="lg:text-4xl font-bold text-black mt-2 mb-2">
+          <h1 className="lg:text-2xl font-bold text-black mt-2 mb-2">
             Manage Your Restaurant <br /> Anytime! Anywhere!
           </h1>
           <div className="mt-6">
@@ -30,7 +30,7 @@ const MobileApp = () => {
           </div>
 
           <div className="flex gap-2 mt-6">
-            <div className="flex justify-center items-center gap-2 bg-red-500 rounded-xl p-3 shadow-xl">
+            <div className="flex justify-center items-center gap-2 bg-red-500 text-white rounded-xl p-3 shadow-xl">
               <BsGooglePlay className="text-3xl"></BsGooglePlay>
               <div className="">
                 <p>Download From</p>

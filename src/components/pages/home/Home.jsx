@@ -11,6 +11,7 @@ import Menus from './OthersDesign/Menus';
 import AboutTeam from './OthersDesign/AboutTeam';
 import Celebration from '../celebration/Celebration';
 import Ldb from '../bdl/Ldb';
+import OtherInformation from './OthersDesign/OtherInformation';
 
 
 
@@ -20,19 +21,17 @@ const Home = () => {
       <div>
         <SearchHero />
         <AboutRestaurant />
-        <Ldb/>
+        <Ldb />
         <Menus />
         <Restaurants />
-        <Celebration/>
-        <AboutRestaurant />
-        <HowItWorks />
+        <Celebration />
 
+        <OtherInformation />
+        <MobileApp />
+        <HowItWorks />
         <TwoCart />
         <About />
-
         <AboutTeam />
-
-        <MobileApp />
         <Reviews />
       </div>
     );

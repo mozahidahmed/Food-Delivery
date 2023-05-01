@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import {BiCartAdd } from "react-icons/bi";
 import { useGetRestaurantsQuery } from '../../../../features/api/apiSlice';
 import Loading from '../../../shared/Loading';
 import { useNavigate } from 'react-router-dom';
@@ -17,14 +18,40 @@ const Restaurants = () => {
 
 
     return (
-      <div className="py-12">
-        <h1 className="text-3xl text-center mb-2">RESTAURANTS FOODS</h1>
-        <p className="text-center">Get your favourite food in 4 simple steps</p>
-        <div className="grid lg:grid-cols-4   md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  px-16 py-6 gap-4">
+      <div className="py-12 container mx-auto">
+        <h1
+          className="text-3xl  mb-2
+         inline-block
+                relative
+                cursor-pointer
+                transition-all
+                duration-500
+                before:content-['']
+                before:absolute
+                before:-bottom-2
+                before:left-0
+                before:w-0
+                before:h-1.5
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-gradient-to-r
+                before:from-red-500
+                before:via-red-400
+                before:to-red-500
+                hover:before:w-full
+                hover:before:opacity-100
+        "
+        >
+          Restaurants foods
+        </h1>
+       
+        <div className="grid lg:grid-cols-4   md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2  container mx-auto py-6 gap-4">
           {data?.map((data) => (
             <>
               <div
-                className="card shadow-xl "
+                className="card  shadow-xl "
                 onClick={() => navigate(`/restaurantfood/${data._id}`)}
               >
                 <img src={data.resimg} alt="" />
@@ -36,7 +63,11 @@ const Restaurants = () => {
                       <p>{data.rank}</p>
                     </div>
                   </div>
-                  <h1>{data.location}</h1>
+                <div className="flex justify-between  items-center">
+                    <h1 className="">{data.location}</h1>
+                     
+                </div>
+                  
                 </div>
               </div>
             </>

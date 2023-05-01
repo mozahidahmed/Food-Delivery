@@ -4,14 +4,41 @@ const HowItWorks = () => {
     
     https: return (
       <div
-        className="py-32 container mx-auto"
+        className="py-12 container mx-auto"
         style={{
           backgroundImage: `url("https://www.khanidani.com/assets/images/works.jpg")`,
         }}
       >
-       
-        <h1 className="text-3xl text-center mb-2">HOW IT WORK</h1>
-        <p className="text-center">Get your favourite food in 4 simple steps</p>
+        <h1
+          className="text-3xl text-center mb-2 
+         inline-block
+                relative
+                cursor-pointer
+                transition-all
+                duration-500
+                before:content-['']
+                before:absolute
+                before:-bottom-2
+                before:left-0
+                before:w-0
+                before:h-1.5
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-gradient-to-r
+                before:from-red-500
+                before:via-red-400
+                before:to-red-500
+                hover:before:w-full
+                hover:before:opacity-100
+        
+        
+        "
+        >
+          HOW IT WORK
+        </h1>
+
         <div className="grid lg:grid-cols-4 justify-center py-2 sm:grid-cols-2 gap-4">
           <div className="card   shadow-xl p-12 rounded-xl">
             <div className="grid justify-center">

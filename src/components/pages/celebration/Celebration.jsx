@@ -8,7 +8,9 @@ const Celebration = () => {
   https: return (
     <div className=" py-12 bg-neutral-300">
       <div className="container mx-auto">
-        <h1 className="text-3xl text-center mb-12">CELEBRATIONS FOOD</h1>
+        <h1 className="text-3xl text-center mb-12
+        
+        ">CELEBRATIONS FOOD</h1>
 
         <div class="flex  sm:py-6 items-center justify-center">
           <div class="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">

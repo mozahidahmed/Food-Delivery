@@ -33,7 +33,7 @@ const About = () => {
           <img
             src="	https://winsfolio.net/html/foodio/assets/img/restaurant-3.jpg"
             alt=""
-            className="rounded-xl"
+            className="rounded-xl "
           />
         </div>
       </div>

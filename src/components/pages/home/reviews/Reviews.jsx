@@ -11,8 +11,8 @@ const Reviews = () => {
   const {data,isLoading,isError}=useGetReviewQuery()
   
     return (
-      <div className="px-6">
-        <div className="py-12">
+      <div className=" ">
+        <div className="py-12 container mx-auto">
           <h1 className="text-3xl text-center font-bold mb-6">
             What People "Say" About Us
           </h1>

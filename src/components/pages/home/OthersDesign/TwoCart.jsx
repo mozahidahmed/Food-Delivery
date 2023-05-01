@@ -3,8 +3,9 @@ import React from 'react';
 const TwoCart = () => {
     	
       return (
-        <div className="py-12 container mx-auto">
-          <div className="grid px-12 lg:grid-cols-2 md:grid-cols-2 justify-center items-center gap-4">
+        <div className="py-6 container mx-auto">
+          <div className="grid px-12 lg:grid-cols-2 md:grid-cols-2 justify-center items-center gap-4
+          ">
             <div
               className="bg-red-500 p-5 text-white rounded-xl py-12"
               style={{
@@ -18,7 +19,7 @@ const TwoCart = () => {
               </div>
             </div>
             <div
-              className="bg-red-500 p-5 text-white rounded-xl py-12"
+              className="bg-red-500 p-5 text-white rounded-xl py-12 "
               style={{
                 backgroundImage: `url("https://winsfolio.net/html/foodio/assets/img/bbq-1.jpg")`,
               }}

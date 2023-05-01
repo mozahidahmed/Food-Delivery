@@ -56,20 +56,49 @@ const Menus = () => {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 2, // optional, default to 1.
     },
   };
 
   return (
-    <div className="container mx-auto py-12">
-      <h1 className="text-3xl  mb-2 lg:text-start md:text-center text-center">
+    <div className="container mx-auto py-12 ">
+      <h1
+        className="text-3xl  mb-2 lg:text-start md:text-center text-center 
+      
+               
+                inline-block
+                relative
+                cursor-pointer
+                transition-all
+                duration-500
+                before:content-['']
+                before:absolute
+                before:-bottom-2
+                before:left-0
+                before:w-0
+                before:h-1.5
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-gradient-to-r
+                before:from-red-500
+                before:via-red-400
+                before:to-red-500
+                hover:before:w-full
+                hover:before:opacity-100
+       
+      
+      
+      "
+      >
         Menus
       </h1>
 
       <Carousel responsive={responsive}>
         <div className="menu_wrapper">
           <img
-            src="	https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/8-300x400.jpg"
+            src="	https://wossthemes.com/jack/wp-content/uploads/2018/01/blog_image_10.jpg"
             alt=""
           />
         </div>
@@ -81,19 +110,21 @@ const Menus = () => {
         </div>
         <div className="menu_wrapper">
           <img
-            src="	https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/7-300x400.jpg"
+            src="	https://wossthemes.com/jack/wp-content/uploads/2018/01/blog_image_7.jpg"
             alt=""
           />
         </div>
         <div className="menu_wrapper">
           <img
-            src="	 https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/5-1-300x400.jpg"
+            src="	 https://duruthemes.com/demo/html/florya/img/services/3.jpg"
             alt=""
           />
         </div>
+       
+       
         <div className="menu_wrapper">
           <img
-            src="	https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/8-300x400.jpg"
+            src="	https://wossthemes.com/jack/wp-content/uploads/2018/01/blog_image_10.jpg"
             alt=""
           />
         </div>
@@ -105,16 +136,20 @@ const Menus = () => {
         </div>
         <div className="menu_wrapper">
           <img
-            src="	https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/7-300x400.jpg"
+            src="	https://wossthemes.com/jack/wp-content/uploads/2018/01/blog_image_7.jpg"
             alt=""
           />
         </div>
         <div className="menu_wrapper">
           <img
-            src="	 https://reactheme.com/products/wordpress/dinenos/wp-content/uploads/2023/02/5-1-300x400.jpg"
+            src="	 https://duruthemes.com/demo/html/florya/img/services/3.jpg"
             alt=""
           />
         </div>
+       
+       
+      
+       
       </Carousel>
     </div>
   );
