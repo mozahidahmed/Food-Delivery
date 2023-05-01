@@ -23,7 +23,7 @@ const Restaurants = () => {
  }, []);
 
     return (
-      <div className="py-12 container mx-auto">
+      <div className="py-12 container mx-auto lg:px-0 md:px-6 px-6 ">
         <h1
           className="text-3xl  mb-2
          inline-block

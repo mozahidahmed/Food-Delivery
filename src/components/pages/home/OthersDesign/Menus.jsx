@@ -61,7 +61,7 @@ const Menus = () => {
   };
 
   return (
-    <div className="container mx-auto py-12 ">
+    <div className="container mx-auto py-12 lg:px-0 md:px-6 px-6 ">
       <h1
         className="text-3xl  mb-2 lg:text-start md:text-center text-center 
       
@@ -120,8 +120,7 @@ const Menus = () => {
             alt=""
           />
         </div>
-       
-       
+
         <div className="menu_wrapper">
           <img
             src="	https://wossthemes.com/jack/wp-content/uploads/2018/01/blog_image_10.jpg"
@@ -146,10 +145,6 @@ const Menus = () => {
             alt=""
           />
         </div>
-       
-       
-      
-       
       </Carousel>
     </div>
   );

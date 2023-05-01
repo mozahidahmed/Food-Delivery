@@ -3,7 +3,7 @@ import { BsFacebook, BsFillPhoneVibrateFill, BsLinkedin } from 'react-icons/bs';
 
 const AboutTeam = () => {
     return (
-      <div className="container mx-auto py-6">
+      <div className="container mx-auto py-6 lg:px-0 md:px-6 px-6">
         <h1
           className="text-3xl lg:text-start md:text-center text-center mb-2
          inline-block
@@ -31,7 +31,7 @@ const AboutTeam = () => {
         >
           popular chefs
         </h1>
-        <p className=" lg:text-start md:text-center text-center">
+        <p className=" lg:text-start md:text-center ">
           Selected with custamer reviews
         </p>
         <div className="grid lg:grid-cols-4  md:grid-cols-2  gap-4 py-6">

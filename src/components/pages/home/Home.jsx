@@ -11,7 +11,7 @@ import AboutTeam from './OthersDesign/AboutTeam';
 import Celebration from '../celebration/Celebration';
 import Ldb from '../bdl/Ldb';
 import OtherInformation from './OthersDesign/OtherInformation';
-import OrderNow from './OthersDesign/OrderNow';
+// import OrderNow from './OthersDesign/OrderNow';
 // import Looking from './OthersDesign/Looking';
 
 
@@ -35,7 +35,7 @@ const Home = () => {
         <MobileApp />
         <AboutTeam />
         <Reviews />
-        <OrderNow />
+        {/* <OrderNow /> */}
       </div>
     );
 };
