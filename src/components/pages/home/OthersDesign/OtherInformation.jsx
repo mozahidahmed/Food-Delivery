@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const OtherInformation = () => {
   return (
@@ -11,9 +12,11 @@ const OtherInformation = () => {
         It’s about identity.
       </p>
       <div className="grid justify-center mt-6">
-        <button className="border p-2 px-12 hover:bg-red-500 hover:text-white">
-          Read More
-        </button>
+        <Link to="/blog">
+          <button className="border p-2 px-12 hover:bg-red-500 hover:text-white">
+            Read More
+          </button>
+        </Link>
       </div>
     </div>
   );

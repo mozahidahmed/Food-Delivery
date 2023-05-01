@@ -12,7 +12,7 @@ const Reviews = () => {
   
     return (
       <div className=" ">
-        <div className="py-12 container mx-auto">
+        <div className="py-6 container mx-auto lg:px-0 md:px-6 px-6">
           <h1 className="text-3xl text-center font-bold mb-6">
             What People "Say" About Us
           </h1>

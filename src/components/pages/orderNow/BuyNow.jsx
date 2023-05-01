@@ -145,7 +145,7 @@ const BuyNow = () => {
           </div>
         </div>
       ) : (
-        <div className="flex text-center justify-center items-center text-4xl text-red-500">
+        <div className="flex text-center justify-center items-center h-screen text-4xl text-red-500">
           <h1 className="lg:text-4xl text-center"> "Items Not Found" </h1>
           <FaSadTear></FaSadTear>
         </div>

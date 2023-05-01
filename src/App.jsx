@@ -52,7 +52,7 @@ function App() {
         <Route path="/morningcoffee" element={<MorningCoffee />}></Route>
         
         <Route
-          path="/blogs"
+          path="/blog"
           element={
             <RequireAuth>
               <Blogs></Blogs>

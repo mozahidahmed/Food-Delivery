@@ -10,37 +10,45 @@ const Dashboard = () => {
     return (
       <div className="">
         <div className="grid lg:grid-cols-12">
-          <div className="col-start-1 col-end-3 bg-red-500 py-6">
+          <div className="col-start-1 col-end-3 bg-red-200 py-6">
             <div className="">
               <Link to="profile">
-                <h1 className="font-bold  p-2 px-6">profile</h1>
+                <h1 className="font-bold  p-2 px-6 bg-red-300 rounded-full mt-2">
+                  profile
+                </h1>
               </Link>
 
               {!admin && (
                 <>
-               
-                    <Link to="myorder">
-                      <h1 className="font-bold  p-2 px-6">Orders</h1>
-                    </Link>
-                
+                  <Link to="myorder">
+                    <h1 className="font-bold  p-2 px-6 bg-red-300 rounded-full mt-2">
+                      Orders
+                    </h1>
+                  </Link>
 
-               
-                    <Link to="addreview">
-                      <h1 className="font-bold  p-2 px-6">Reviews</h1>
-                    </Link>
-                
+                  <Link to="addreview">
+                    <h1 className="font-bold  p-2 px-6 bg-red-300 rounded-full mt-2">
+                      Reviews
+                    </h1>
+                  </Link>
                 </>
               )}
               {admin && (
                 <>
                   <Link to="managefoods">
-                    <h1 className="font-bold  p-2 px-6">Manage Foods</h1>
+                    <h1 className="font-bold  p-2 px-6 bg-red-300 rounded-full mt-2">
+                      Manage Foods
+                    </h1>
                   </Link>
                   <Link to="addfood">
-                    <h1 className="font-bold  p-2 px-6">Add Foods</h1>
+                    <h1 className="font-bold  p-2 px-6 bg-red-300 rounded-full mt-2">
+                      Add Foods
+                    </h1>
                   </Link>
                   <Link to="alluser">
-                    <h1 className="font-bold  p-2 px-6">All User</h1>
+                    <h1 className="font-bold  p-2 px-6 bg-red-300 rounded-full mt-2">
+                      All User
+                    </h1>
                   </Link>
                 </>
               )}

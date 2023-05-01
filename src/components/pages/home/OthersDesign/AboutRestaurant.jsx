@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutRestaurant = () => {
   return (
@@ -11,9 +12,11 @@ const AboutRestaurant = () => {
         It’s about identity.
       </p>
       <div className="grid justify-center mt-6">
+        <Link to="/blog">
         <button className="border p-2 px-12 hover:bg-red-500 hover:text-white">
           Read More
         </button>
+        </Link>
       </div>
     </div>
   );

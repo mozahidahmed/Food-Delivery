@@ -3,7 +3,7 @@ import { BsFacebook, BsFillPhoneVibrateFill, BsLinkedin } from 'react-icons/bs';
 
 const AboutTeam = () => {
     return (
-      <div className="container mx-auto">
+      <div className="container mx-auto py-6">
         <h1
           className="text-3xl lg:text-start md:text-center text-center mb-2
          inline-block

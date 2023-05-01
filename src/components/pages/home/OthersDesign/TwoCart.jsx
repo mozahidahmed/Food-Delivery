@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TwoCart = () => {
+   useEffect(() => {
+     AOS.init({ duration: 2000 });
+   }, []);
+
     	
       return (
         <div className="py-6 container mx-auto">
-          <div className="grid px-12 lg:grid-cols-2 md:grid-cols-2 justify-center items-center gap-4
-          ">
+          <div
+            className="grid  lg:grid-cols-2 md:grid-cols-2 justify-center items-center gap-2
+          "
+          >
             <div
+              data-aos="zoom-in"
               className="bg-red-500 p-5 text-white rounded-xl py-12"
               style={{
                 backgroundImage: `url("https://winsfolio.net/html/foodio/assets/img/bbq.jpg")`,
@@ -19,6 +28,7 @@ const TwoCart = () => {
               </div>
             </div>
             <div
+              data-aos="zoom-in"
               className="bg-red-500 p-5 text-white rounded-xl py-12 "
               style={{
                 backgroundImage: `url("https://winsfolio.net/html/foodio/assets/img/bbq-1.jpg")`,

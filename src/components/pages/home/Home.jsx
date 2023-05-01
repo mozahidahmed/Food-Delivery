@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchHero from './OthersDesign/SearchHero';
 import MobileApp from './OthersDesign/MobileApp';
-import HowItWorks from './OthersDesign/HowItWorks';
 import Reviews from './reviews/Reviews';
 import About from './OthersDesign/About';
 import TwoCart from './OthersDesign/TwoCart';
@@ -12,6 +11,8 @@ import AboutTeam from './OthersDesign/AboutTeam';
 import Celebration from '../celebration/Celebration';
 import Ldb from '../bdl/Ldb';
 import OtherInformation from './OthersDesign/OtherInformation';
+import OrderNow from './OthersDesign/OrderNow';
+// import Looking from './OthersDesign/Looking';
 
 
 
@@ -27,12 +28,14 @@ const Home = () => {
         <Celebration />
 
         <OtherInformation />
-        <MobileApp />
-        <HowItWorks />
         <TwoCart />
+
+        {/* <Looking/> */}
         <About />
+        <MobileApp />
         <AboutTeam />
         <Reviews />
+        <OrderNow />
       </div>
     );
 };

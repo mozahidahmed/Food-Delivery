@@ -52,8 +52,12 @@ const Register = () => {
     <div className="flex justify-center items-center h-screen">
       <div className="lg:w-6/12 shadow-xl p-6">
         <div className="grid lg:grid-cols-2 grid-cols-1">
-          <div className="bg-red-500">
-            <img className="" src="" alt="alt" />
+          <div className="">
+            <img
+              className=""
+              src="https://duruthemes.com/demo/html/florya/img/services/3.jpg"
+              alt="alt"
+            />
           </div>
           <div className="px-5">
             <h1 className="font-bold text-2xl">Signup</h1>

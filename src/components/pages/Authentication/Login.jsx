@@ -50,10 +50,10 @@ const LogIn = () => {
     <div className="flex justify-center items-center py-12 h-screen">
       <div className="lg:w-6/12 shadow-xl p-6">
         <div className="grid lg:grid-cols-2 grid-cols-1">
-          <div className="bg-red-500">
+          <div className="">
             <img
               className=""
-              src="https://winsfolio.net/html/foodio/assets/img/hero-1.jpg"
+              src="https://duruthemes.com/demo/html/florya/img/services/3.jpg"
               alt="fgd"
             />
           </div>

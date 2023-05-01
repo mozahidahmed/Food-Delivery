@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const Celebration = () => {
   //duruthemes.com/demo/html/florya/img/services/4.jpg
+  useEffect(() => {
+     AOS.init({ duration: 2000 });
+   }, []);
   https: return (
-    <div className=" py-12 bg-neutral-300">
+    <div className=" py-12 bg-[#dee2e6]">
       <div className="container mx-auto">
-        <h1 className="text-3xl text-center mb-12
+        <h1
+          className="text-3xl text-center mb-12
         
-        ">CELEBRATIONS FOOD</h1>
+        "
+        >
+          CELEBRATIONS FOOD
+        </h1>
 
         <div class="flex  sm:py-6 items-center justify-center">
-          <div class="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">
+          <div
+            data-aos="fade-right"
+            class="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4"
+          >
             <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div class="h-96 w-72">
                 <img
@@ -38,7 +49,10 @@ const Celebration = () => {
                 </Link>
               </div>
             </div>
-            <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div
+              data-aos="fade-right"
+              class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+            >
               <div class="h-96 w-72">
                 <img
                   class="h-full w-full object-cover transition-transform duration-500  group-hover:scale-125"
@@ -62,7 +76,10 @@ const Celebration = () => {
                 </Link>
               </div>
             </div>
-            <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div
+              data-aos="fade-right"
+              class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+            >
               <div class="h-96 w-72">
                 <img
                   class="h-full w-full object-cover transition-transform duration-500  group-hover:scale-125"
@@ -86,7 +103,10 @@ const Celebration = () => {
                 </Link>
               </div>
             </div>
-            <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div
+              data-aos="fade-right"
+              class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+            >
               <div class="h-96 w-72">
                 <img
                   class="h-full w-full object-cover transition-transform duration-500  group-hover:scale-125"
