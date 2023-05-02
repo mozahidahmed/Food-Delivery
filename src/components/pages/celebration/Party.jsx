@@ -19,7 +19,7 @@ const Party = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (isLoading) {
-      <Loading />;
+     return <Loading />;
     }
     if (isSuccess) {
       console.log(data);

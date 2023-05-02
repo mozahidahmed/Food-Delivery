@@ -20,7 +20,7 @@ const Dinner = () => {
 
   useEffect(() => {
     if (isLoading) {
-      <Loading />;
+     return <Loading />;
     }
     if (isSuccess) {
       console.log(data);

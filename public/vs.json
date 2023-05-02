@@ -1,54 +1,54 @@
-{
-  "editor.fontSize": 17,
-  "html.autoClosingTags": true,
+// {
+//   "editor.fontSize": 17,
+//   "html.autoClosingTags": true,
 
-  "editor.guides.bracketPairs": "active",
-  // cursor animation
-  "editor.cursorBlinking": "expand",
+//   "editor.guides.bracketPairs": "active",
+//   // cursor animation
+//   "editor.cursorBlinking": "expand",
 
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "compressed",
-      "extensionName": ".css",
-      "savePath": "./dist"
-    }
-  ],
+//   "liveSassCompile.settings.formats": [
+//     {
+//       "format": "compressed",
+//       "extensionName": ".css",
+//       "savePath": "./dist"
+//     }
+//   ],
 
-  "liveSassCompile.settings.generateMap": true,
-  "editor.lineHeight": 1.5,
-  "material-ui-snippets.showNotesOnStartup": false,
-  "diffEditor.diffAlgorithm": "experimental",
-  "editor.autoClosingOvertype": "always",
-  "auto-close-tag.fullMode": true,
-  "emmet.triggerExpansionOnTab": true,
+//   "liveSassCompile.settings.generateMap": true,
+//   "editor.lineHeight": 1.5,
+//   "material-ui-snippets.showNotesOnStartup": false,
+//   "diffEditor.diffAlgorithm": "experimental",
+//   "editor.autoClosingOvertype": "always",
+//   "auto-close-tag.fullMode": true,
+//   "emmet.triggerExpansionOnTab": true,
 
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "files.associations": {
-    "*html": "html"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "auto-close-tag.disableOnLanguage": [],
-  "editor.linkedEditing": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "workbench.colorTheme": "Andromeda Colorizer",
-  "liveServer.settings.donotShowInfoMsg": true,
+//   "terminal.integrated.defaultProfile.windows": "Git Bash",
+//   "files.associations": {
+//     "*html": "html"
+//   },
+//   "[jsonc]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "emmet.includeLanguages": {
+//     "javascript": "javascriptreact"
+//   },
+//   "auto-close-tag.disableOnLanguage": [],
+//   "editor.linkedEditing": true,
+//   "editor.formatOnSave": true,
+//   "editor.formatOnPaste": true,
+//   "workbench.colorTheme": "Andromeda Colorizer",
+//   "liveServer.settings.donotShowInfoMsg": true,
 
 
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "code-runner.runInTerminal": true,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.autoSave": "afterDelay",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
-}
+//   "[javascript]": {
+//     "editor.defaultFormatter": "vscode.typescript-language-features"
+//   },
+//   "code-runner.runInTerminal": true,
+//   "[javascriptreact]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "files.autoSave": "afterDelay",
+//   "[json]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   }
+// }

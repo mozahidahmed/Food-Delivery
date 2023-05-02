@@ -7,7 +7,7 @@ const ManageFood = () => {
   const { data, isLoading } = useGetAllFoodQuery();
 
   if (isLoading) {
-    <Loading />;
+    return  <Loading />;
   }
 
   const [deleteFood] = useDeleteFoodMutation();
