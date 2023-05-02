@@ -38,27 +38,76 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/login" element={<LogIn />}></Route>
-        
+
         {/* celevration food  */}
-        <Route path="/gift" element={<Gift />}></Route>
-        <Route path="/birthday" element={<BirthDay />}></Route>
-        <Route path="/party" element={<Party />}></Route>
-        <Route path="/drink" element={<Drink />}></Route>
-        
-        {/* menu food  */}
-        <Route path="/breakfast" element={<BreakFast />}></Route>
-        <Route path="/lunch" element={<Lunch />}></Route>
-        <Route path="/dinner" element={<Dinner />}></Route>
-        <Route path="/morningcoffee" element={<MorningCoffee />}></Route>
-        
         <Route
-          path="/blog"
+          path="/gift"
           element={
             <RequireAuth>
-              <Blogs></Blogs>
+              <Gift />
             </RequireAuth>
           }
         ></Route>
+        <Route
+          path="/birthday"
+          element={
+            <RequireAuth>
+              <BirthDay />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/party"
+          element={
+            <RequireAuth>
+              <Party />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/drink"
+          element={
+            <RequireAuth>
+              <Drink />
+            </RequireAuth>
+          }
+        ></Route>
+
+        {/* menu food  */}
+        <Route
+          path="/breakfast"
+          element={
+            <RequireAuth>
+              <BreakFast />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/lunch"
+          element={
+            <RequireAuth>
+              <Lunch />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/dinner"
+          element={
+            <RequireAuth>
+              <Dinner />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/morningcoffee"
+          element={
+            <RequireAuth>
+              <MorningCoffee />
+            </RequireAuth>
+          }
+        ></Route>
+
+        <Route path="/blog" element={<Blogs></Blogs>}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/restaurantfood/:id" element={<RestaurantsFood />}></Route>
         <Route
