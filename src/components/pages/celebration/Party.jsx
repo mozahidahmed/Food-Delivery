@@ -17,17 +17,11 @@ const Party = () => {
   const { data, isLoading, isSuccess, isError } = useGetPartyQuery();
 
   const dispatch = useDispatch();
-  useEffect(() => {
+
     if (isLoading) {
-     return <Loading />;
+     <Loading />;
     }
-    if (isSuccess) {
-      console.log(data);
-    }
-    if (isError) {
-      return <p>error</p>;
-    }
-  }, []);
+    
 
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));

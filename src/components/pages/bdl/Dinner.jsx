@@ -17,18 +17,10 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 const Dinner = () => {
   const { data, isLoading, isSuccess, isError } = useGetDinnerQuery();
  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (isLoading) {
-     return <Loading />;
-    }
-    if (isSuccess) {
-      console.log(data);
-    }
-    if (isError) {
-      return <p>error</p>;
-    }
-  }, []);
+if (isLoading) {
+  <Loading />;
+}
+ 
     const handleAddToCart = (data) => {
       dispatch(addToCart(data));
       alert("added Successfully!");

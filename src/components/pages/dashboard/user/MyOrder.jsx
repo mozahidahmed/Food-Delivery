@@ -9,7 +9,7 @@ const MyOrder = () => {
   const [user] = useAuthState(auth);
  const { data, isLoading, isSuccess } = useGetOrderWithEmailQuery(user?.email);
  if(isLoading){
-  return <Loading/>
+   <Loading/>
  }
 //  console.log('order dat',data)
 

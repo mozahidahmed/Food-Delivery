@@ -15,17 +15,11 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 const MorningCoffee = () => {
   const { data, isLoading, isSuccess, isError } = useGetMorningCoffeeQuery();
  const dispatch = useDispatch();  
-  useEffect(() => {
+ 
     if (isLoading) {
-     return  <Loading />;
+      <Loading />;
     }
-    if (isSuccess) {
-      console.log('ghjkgjhgjkgjk',data);
-    }
-    if (isError) {
-      return <p>error</p>;
-    }
-  }, []);
+   
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
     alert("added Successfully!");

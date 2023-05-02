@@ -17,17 +17,11 @@ const Gift = () => {
   const { data, isLoading, isSuccess, isError } = useGetGiftQuery();
 
   const dispatch = useDispatch();
-  useEffect(() => {
+ 
     if (isLoading) {
-     return <Loading />;
+      <Loading />;
     }
-    if (isSuccess) {
-      console.log(data);
-    }
-    if (isError) {
-      return <p>error</p>;
-    }
-  }, []);
+  
 
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));

@@ -16,17 +16,11 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 const Drink = () => {
   const { data, isLoading, isSuccess, isError } = useGetDrinkQuery();
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (isLoading) {
-     return <Loading />;
+  
+  if (isLoading) {
+  <Loading />;
     }
-    if (isSuccess) {
-      console.log(data);
-    }
-    if (isError) {
-      return <p>error</p>;
-    }
-  }, []);
+    
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
     alert("added Successfully!");

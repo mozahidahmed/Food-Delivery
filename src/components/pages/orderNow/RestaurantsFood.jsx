@@ -19,11 +19,9 @@ const RestaurantsFood = () => {
 
 
   if (isLoading) {
-    <Loading />;
+     <Loading />;
   }
-  if (isSuccess) {
-    // console.log(data);
-  }
+ 
 
     const handleAddToCart = (food) => {
       dispatch(

@@ -15,19 +15,13 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const BreakFast = () => {
   const { data, isLoading, isSuccess, isError } = useGetBreakfastQuery();
-
+ if (isLoading) {
+   return <Loading />;
+ }
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (isLoading) {
-     return  <Loading />;
-    }
-    if (isSuccess) {
-      console.log(data);
-    }
-    if (isError) {
-      return <p>error</p>;
-    }
-  }, []);
+ 
+ 
+ 
 
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));

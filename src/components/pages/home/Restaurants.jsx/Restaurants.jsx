@@ -15,7 +15,7 @@ const Restaurants = () => {
   const navigate = useNavigate();
   const { data, isLoading ,isSuccess} = useGetRestaurantsQuery();
   if (isLoading) {
-    return <Loading />
+    <Loading />
   }
  
  useEffect(() => {

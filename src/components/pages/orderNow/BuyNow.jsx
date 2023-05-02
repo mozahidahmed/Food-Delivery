@@ -4,7 +4,6 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { FaSadTear } from "react-icons/fa";
 import { deleteToCart } from "../../../features/api/cartSlice";
 import { useAddOrderMutation } from "../../../features/api/apiSlice";
-import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './../../../firebase.init';
 

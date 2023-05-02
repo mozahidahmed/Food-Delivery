@@ -6,9 +6,14 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 import { useGetReviewQuery } from "../../../../features/api/ApiSlice";
+import Loading from "../../../shared/Loading";
 
 const Reviews = () => {
   const {data,isLoading,isError}=useGetReviewQuery()
+ if (isLoading) {
+ <Loading />;
+ }
+
   
     return (
       <div className=" ">
