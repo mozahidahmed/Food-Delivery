@@ -13,8 +13,9 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 
 const MorningCoffee = () => {
+  const dispatch = useDispatch();
   const { data, isLoading, isSuccess, isError } = useGetMorningCoffeeQuery();
- const dispatch = useDispatch();  
+   
  
     if (isLoading) {
       <Loading />;

@@ -11,7 +11,7 @@ import { addToCart } from '../../../features/api/cartSlice';
 
 const RestaurantsFood = () => {
   const { id } = useParams();
- const dispatch = useDispatch();
+   const dispatch = useDispatch();
 
   const { data, isLoading, isSuccess } = useGetRestaurantByIdQuery(id, {
     pollingInterval: 500,
