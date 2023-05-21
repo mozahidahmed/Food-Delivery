@@ -4,10 +4,13 @@ import Loading from "../../../shared/Loading";
 import Swal from "sweetalert2";
 
 const ManageFood = () => {
-  const { data, isLoading } = useGetAllFoodQuery();
+  const { data, isLoading, isSuccess } = useGetAllFoodQuery();
 
   if (isLoading) {
-      <Loading />
+   <Loading />;
+  }
+   if (isSuccess) {
+     console.log(data);
   }
 
   const [deleteFood] = useDeleteFoodMutation();

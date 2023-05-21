@@ -1,12 +1,12 @@
-import React ,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Ldb = () => {
-   useEffect(() => {
-     AOS.init({ duration: 2000 });
-   }, []);
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <div className="bg-[#dee2e6]">
       <div class="flex lg:min-h-screen  py-6 items-center justify-center ">

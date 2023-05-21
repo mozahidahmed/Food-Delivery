@@ -18,7 +18,7 @@ const Drink = () => {
   const dispatch = useDispatch();
   
   if (isLoading) {
-  <Loading />;
+  return <Loading />;
     }
     
   const handleAddToCart = (data) => {

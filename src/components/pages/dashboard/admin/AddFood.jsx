@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { useAddFoodMutation } from '../../../../features/api/ApiSlice';
+import Loading from "../../../shared/Loading";
 
 const AddFood = () => {
      const [postFood, { isLoading, isSuccess, isError }] =
        useAddFoodMutation();
     
-         useEffect(() => {
+
            if (isLoading) {
-             return <p>Loading....................</p>;
+          <Loading/>;
            }
            if (isSuccess) {
              alert("post success");
@@ -15,7 +16,7 @@ const AddFood = () => {
            if (isError) {
              return <p>error</p>;
            }
-         }, []);
+ 
 
           
           const handlePost = (event) => {

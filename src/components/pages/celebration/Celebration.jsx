@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const Celebration = () => {
   //duruthemes.com/demo/html/florya/img/services/4.jpg
   useEffect(() => {
-     AOS.init({ duration: 2000 });
-   }, []);
+    AOS.init({ duration: 2000 });
+  }, []);
   https: return (
     <div className=" py-12 bg-[#dee2e6]">
       <div className="container mx-auto">
@@ -138,9 +137,6 @@ const Celebration = () => {
 };
 
 export default Celebration;
-
-
-
 
 /*
 

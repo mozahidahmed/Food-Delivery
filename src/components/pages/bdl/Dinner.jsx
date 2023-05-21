@@ -18,7 +18,7 @@ const Dinner = () => {
   const { data, isLoading, isSuccess, isError } = useGetDinnerQuery();
  const dispatch = useDispatch();
 if (isLoading) {
-  <Loading />;
+  return <Loading />;
 }
  
     const handleAddToCart = (data) => {

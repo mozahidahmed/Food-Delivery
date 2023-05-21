@@ -29,6 +29,18 @@ const Footer = () => {
             <h2 className="font-bold text-2xl mb-2">Contact:</h2>
             <p>mozahidwebmin11d1-@gmail.com</p>
             <p>+8801614853207</p>
+            <div className="flex">
+              <img
+                className="h-[70px] mt-1"
+                src="https://i.ibb.co/94Dypt1/logo-1.png"
+                alt=""
+              />
+              <img
+                className="h-[70px] mt-1"
+                src="https://fooddy.ancorathemes.com/wp-content/uploads/2017/02/phone_img.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
         <div className="grid justify-center">

@@ -19,7 +19,7 @@ const Party = () => {
   const dispatch = useDispatch();
 
     if (isLoading) {
-     <Loading />;
+      return  <Loading />;
     }
     
 

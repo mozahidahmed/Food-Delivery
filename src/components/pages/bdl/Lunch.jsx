@@ -19,7 +19,7 @@ const Lunch = () => {
 
  
     if (isLoading) {
-       <Loading />;
+     return <Loading />;
     }
   
     const handleAddToCart = (data) => {

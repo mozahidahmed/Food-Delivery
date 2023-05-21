@@ -18,7 +18,7 @@ const MorningCoffee = () => {
    
  
     if (isLoading) {
-      <Loading />;
+    return <Loading />;
     }
    
   const handleAddToCart = (data) => {

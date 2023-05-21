@@ -19,7 +19,7 @@ const RestaurantsFood = () => {
 
 
   if (isLoading) {
-     <Loading />;
+     return <Loading />;
   }
  
 

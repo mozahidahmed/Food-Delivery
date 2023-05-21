@@ -11,7 +11,7 @@ import Loading from "../../../shared/Loading";
 const Reviews = () => {
   const {data,isLoading,isError}=useGetReviewQuery()
  if (isLoading) {
- <Loading />;
+ return <Loading />;
  }
 
   
