@@ -12,8 +12,7 @@ import Celebration from '../celebration/Celebration';
 import Ldb from '../bdl/Ldb';
 import OtherInformation from './OthersDesign/OtherInformation';
 import MostPopular from './OthersDesign/MostPopular';
-// import OrderNow from './OthersDesign/OrderNow';
-// import Looking from './OthersDesign/Looking';
+//djhfsjkh
 
 
 
@@ -32,13 +31,13 @@ const Home = () => {
         <MostPopular />
         <TwoCart />
 
-        {/* <Looking/> */}
+     
         <About />
         <Reviews />
         <AboutTeam />
         <MobileApp />
 
-        {/* <OrderNow /> */}
+   
       </div>
     );
 };
