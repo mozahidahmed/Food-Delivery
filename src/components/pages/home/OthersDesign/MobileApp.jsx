@@ -46,7 +46,7 @@ const MobileApp = () => {
             </div>
           </div>
         </div>
-{/* */}
+{/* h*/}
         <div className="grid justify-center  md:order-last  order-first">
           <img
             src="https://fooddy.ancorathemes.com/wp-content/uploads/2017/02/phone_img.png"
