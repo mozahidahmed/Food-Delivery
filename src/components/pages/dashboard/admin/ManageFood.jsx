@@ -4,7 +4,9 @@ import Loading from "../../../shared/Loading";
 import Swal from "sweetalert2";
 
 const ManageFood = () => {
-  const { data, isLoading, isSuccess } = useGetAllFoodQuery();
+  const { data, isLoading, isSuccess } = useGetAllFoodQuery(
+    null,{refetchOnMountOrArgChange:true}
+    );
 
   if (isLoading) {
    <Loading />;
@@ -26,7 +28,7 @@ const ManageFood = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        deleteFood(id);
+    
         Swal.fire("Deleted!", "Food has been deleted.", "success");
       }
     });

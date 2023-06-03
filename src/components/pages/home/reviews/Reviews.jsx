@@ -9,7 +9,8 @@ import { useGetReviewQuery } from "../../../../features/api/ApiSlice";
 import Loading from "../../../shared/Loading";
 
 const Reviews = () => {
-  const {data,isLoading,isError}=useGetReviewQuery()
+ const {data,isLoading,isError}=useGetReviewQuery()
+ 
  if (isLoading) {
  return <Loading />;
  }
@@ -35,18 +36,15 @@ const Reviews = () => {
               <>
                 <SwiperSlide>
                   <div className="card border p-6 rounded-xl">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quod libero non consectetur saepe fugit? Voluptates,
-                      officia? In cumque sapiente ipsum.
-                    </p>
+                    <p>{review.review}</p>
                     <div className="flex justify-between items-center mt-2">
                       <h1 className="text-2xl font-bold">{review.name}</h1>
                       <div className="flex">
                         <AiFillStar className="text-yellow-400"></AiFillStar>
                         <AiFillStar className="text-yellow-400"></AiFillStar>
                         <AiFillStar className="text-yellow-400"></AiFillStar>
-                        <AiFillStar className="text-yellow-400"></AiFillStar>
+                        <AiFillStar className="text-yellow-400"></AiFillStar> 
+                     
                       </div>
                     </div>
                   </div>

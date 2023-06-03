@@ -7,7 +7,9 @@ import Loading from '../../../shared/Loading';
 
 const MyOrder = () => {
   const [user] = useAuthState(auth);
- const { data, isLoading, isSuccess } = useGetOrderWithEmailQuery(user?.email);
+ const { data, isLoading, isSuccess } = useGetOrderWithEmailQuery(user?.email, {
+   refetchOnMountOrArgChange: true,
+ });
  if(isLoading){
    <Loading/>
  }

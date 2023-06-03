@@ -6,6 +6,7 @@ import { deleteToCart } from "../../../features/api/cartSlice";
 import { useAddOrderMutation } from "../../../features/api/apiSlice";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './../../../firebase.init';
+import Swal from "sweetalert2";
 
 const BuyNow = () => {
   const [user]=useAuthState(auth)
@@ -16,17 +17,29 @@ const BuyNow = () => {
   const [select, setSelect] = useState(0);
   
 
-    useEffect(() => {
+ 
       if (isLoading) {
-        return <p>Loading....................</p>;
+    Swal.fire({
+      title: "Product is added",
+      text: "Are you sure to add data",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: " click button for add",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteFood(id);
+        Swal.fire("Deleted!", "Food has been deleted.", "success");
       }
-      if (isSuccess) {
-        alert("post success");
+    });
       }
+      
+   
       if (isError) {
         return <p>error</p>;
       }
-    }, []);
+
 
 
 
@@ -140,7 +153,7 @@ const BuyNow = () => {
             >
               Order Now
             </button>
-            {isSuccess && <p className="text-center text-green-500 font-bold"> wow your order success </p>}
+            {/* {isSuccess && <p className="text-center text-green-500 font-bold"> wow your order success </p>} */}
           </div>
         </div>
       ) : (

@@ -1,21 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAddFoodMutation } from '../../../../features/api/ApiSlice';
 import Loading from "../../../shared/Loading";
+import Swal from "sweetalert2";
 
 const AddFood = () => {
      const [postFood, { isLoading, isSuccess, isError }] =
        useAddFoodMutation();
+       const [data, setData] = useState({
+         fname: "",
+         price: "",
+         ftype: "",
+         fimg:""
+       });
+      
     
 
-           if (isLoading) {
-          <Loading/>;
-           }
-           if (isSuccess) {
-             alert("post success");
-           }
-           if (isError) {
-             return <p>error</p>;
-           }
+   
+            if (isLoading) {
+              <Loading />;
+              
+              Swal.fire({
+                title: "Product is added",
+                text: "Are you sure to add data",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6",
+                confirmButtonText: " click button for add",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  deleteFood(id);
+                  Swal.fire("Deleted!", "Food has been deleted.", "success");
+                }
+              });
+         
+            }
+            // if (isSuccess) {
+            //   alert("post success");
+            
+            // }
+            if (isError) {
+              return <p>error</p>;
+            }
+     
  
 
           
@@ -29,6 +56,7 @@ const AddFood = () => {
             };
             console.log(postData);
             postFood(postData);
+           
           };
 
     return (

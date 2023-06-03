@@ -22,7 +22,7 @@ export const apiSlice = createApi({
   ],
   endpoints: (builder) => ({
     getRestaurants: builder.query({
-      query: () => ({
+      query: (id) => ({
         url: "/restaurants",
       }),
       providesTags: ["restaurants"],
