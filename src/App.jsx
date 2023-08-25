@@ -39,7 +39,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/login" element={<LogIn />}></Route>
 
-        {/* celevration food  */}
+        {/* celebration food  */}
         <Route
           path="/gift"
           element={
@@ -136,5 +136,5 @@ function App() {
     </div>
   );
 }
-
+//some edit
 export default App
